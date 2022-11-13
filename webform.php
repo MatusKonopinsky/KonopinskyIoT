@@ -9,15 +9,8 @@
 
 <?php
 // define variables and set to empty values
-
-/*$nameErr = $emailErr = $genderErr = $websiteErr = "";
+$nameErr = $emailErr = $genderErr = $websiteErr = "";
 $name = $email = $gender = $comment = $website = "";
-
-$file1 = fopen("sensors.txt","w") or die("Unable to open file!");
-$text1 = "a=" . $sn1 . " b=" . $sn2;
-        
-fwrite($file1, $text1);
-fclose($file1);*/
 
 ?>
 
@@ -43,6 +36,19 @@ fclose($file1);*/
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>
+
+<?php
+// define variables and set to empty values
+
+$nameErr = $emailErr = $genderErr = $websiteErr = "";
+$name = $email = $gender = $comment = $website = "";
+
+$file1 = fopen("output.txt","w") or die("Unable to open file!");
+        
+fwrite($file1, $name);
+fclose($file1);
+
+?>
 
 <?php
 echo "<h2>Your Input:</h2>";
