@@ -132,7 +132,7 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['website']) &
 
 $txt = fopen('output.txt','a') or die("Unable to open file!");
         
-fwrite($txt, $_POST['name']);
+fwrite($txt, $_POST['name'].PHP_EOL);
 fwrite($txt, $_POST['email']);
 fwrite($txt, $_POST['website']);
 fwrite($txt, $_POST['comment']);
