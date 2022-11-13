@@ -102,7 +102,7 @@ fwrite($txt, "Name: ".$_POST['name'].PHP_EOL);
 fwrite($txt, "E-mail: ".$_POST['email'].PHP_EOL);
 fwrite($txt, "Gender: ".$_POST['gender'].PHP_EOL);
 fwrite($txt, "Age: ".$_POST['age'].PHP_EOL);
-fwrite($txt, "Occupation".$_POST['occupation'].PHP_EOL);
+fwrite($txt, "Occupation: ".$_POST['occupation'].PHP_EOL);
 fwrite($txt, "Intention of visit: ".$_POST["visitor"]." ".$_POST["user"]." ".$_POST["admin"].PHP_EOL);
 
 fwrite($txt, PHP_EOL);
@@ -115,9 +115,9 @@ echo $email;
 echo "<br>";
 echo $age;
 echo "<br>";
-echo $website;
+echo $occupation;
 echo "<br>";
-echo $comment;
+echo $visitor;
 echo "<br>";
 echo $gender;
 ?>
