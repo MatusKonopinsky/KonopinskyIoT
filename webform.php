@@ -102,7 +102,7 @@ function test_input($data) {
 <h2>Webform</h2>
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-  Name: <input type="text" name="name" value="<?php $_GET["name"];?>">
+  Name: <input type="text" name="name" value="<?php echo $name;?>">
   <br><br>
   <span class="error"><?php echo $nameErr;?></span>
   <br><br>
@@ -125,11 +125,15 @@ function test_input($data) {
 
 <?php
 
-$file1 = "output.txt";
-$txt = fopen($file1,"w") or die("Unable to open file!");
+if(isset($_POST['name'])){
+  $data = $_POST['name'];
+
+$txt = fopen('output.txt','a') or die("Unable to open file!");
         
-fwrite($txt, $name);
+fwrite($txt, $data);
 fclose($txt);
+
+}
 
 ?>
 
