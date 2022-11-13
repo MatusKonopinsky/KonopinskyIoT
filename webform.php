@@ -107,9 +107,11 @@ function test_input($data) {
   <span class="error"><?php echo $nameErr;?></span>
   <br><br>
   E-mail: <input type="text" name="email" value="<?php echo $email;?>">
+  <br><br>
   <span class="error"><?php echo $emailErr;?></span>
   <br><br>
   Website: <input type="text" name="website" value="<?php echo $website;?>">
+  <br><br>
   <span class="error"><?php echo $websiteErr;?></span>
   <br><br>
   Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
@@ -118,6 +120,7 @@ function test_input($data) {
   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="other">Other  
+  <br><br>
   <span class="error"><?php echo $genderErr;?></span>
   <br><br>
   <input type="submit" name="submit" value="Submit">  
@@ -125,12 +128,15 @@ function test_input($data) {
 
 <?php
 
-if(isset($_POST['name'])){
-  $data = $_POST['name'];
+if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['website']) && isset($_POST['comment']) && isset($_POST['gender'])){
 
 $txt = fopen('output.txt','a') or die("Unable to open file!");
         
-fwrite($txt, $data);
+fwrite($txt, $_POST['name']);
+fwrite($txt, $_POST['email']);
+fwrite($txt, $_POST['website']);
+fwrite($txt, $_POST['comment']);
+fwrite($txt, $_POST['gender']);
 fclose($txt);
 
 }
