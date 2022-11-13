@@ -3,7 +3,7 @@
 <head>
 <style>
 body{
-    background-image: url("boat.jpg");
+    background-image: url("redblack.jpg");
     background-repeat: no-repeat;
     background-size: auto;
     background-color: #333;
