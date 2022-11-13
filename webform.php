@@ -5,7 +5,7 @@
 body{
     background-image: url("redblack.jpg");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     background-color: #333;
 }
 </style>
@@ -43,10 +43,6 @@ $name = $email = $gender = $comment = $website = "";
 </form>
 
 <?php
-// define variables and set to empty values
-
-$nameErr = $emailErr = $genderErr = $websiteErr = "";
-$name = $email = $gender = $comment = $website = "";
 
 $file1 = fopen("output.txt","w") or die("Unable to open file!");
         
