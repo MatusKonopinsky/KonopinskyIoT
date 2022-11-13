@@ -13,17 +13,6 @@
 $nameErr = $emailErr = $genderErr = $websiteErr = "";
 $name = $email = $gender = $comment = $website = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  
-    $name = $_POST["name"];
-
-    $email = $_POST["email"];
-
-    $website = $_POST["website"];
-
-    $comment = $_POST["comment"];
-
-}
 
 ?>
 
@@ -51,6 +40,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </form>
 
 <?php
+$name = $_POST["name"];
+
+$email = $_POST["email"];
+
+$website = $_POST["website"];
+
+$comment = $_POST["comment"];
 echo "<h2>Your Input:</h2>";
 echo $name;
 echo "<br>";
