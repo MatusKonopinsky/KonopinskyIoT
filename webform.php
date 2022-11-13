@@ -3,10 +3,11 @@
 <head>
 <style>
 body{
-    background-image: url("redblack.jpg");
+    background-image: url("road.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #333;
+    filter: blur(8px);
 }
 </style>
 </head>
