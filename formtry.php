@@ -3,7 +3,7 @@
 <html>
 <head>
 <style>
-.error {color: #FF0000;}
+.error {color: #333;}
 </style>
 </head>
 <body>  
