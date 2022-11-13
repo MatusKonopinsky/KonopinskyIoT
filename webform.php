@@ -79,7 +79,6 @@ $name = $email = $gender = $age = $comment = $website = "";
 </form>
 
 <?php
-$name = $email = $gender = $age = $comment = $website = "";
 
 $name = $_POST["name"];
 
