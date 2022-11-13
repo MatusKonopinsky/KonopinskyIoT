@@ -2,7 +2,11 @@
 <html>
 <head>
 <style>
-.error {color: #FF0000;}
+body{
+    background-image: url("boat.jpg");
+    background-repeat: no-repeat;
+    background-color: #333;
+}
 </style>
 </head>
 <body>  
