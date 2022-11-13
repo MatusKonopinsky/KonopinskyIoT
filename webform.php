@@ -103,6 +103,7 @@ fclose($txt);
 
 } else{
 echo "Some value is missing!";
+echo "<br>";
 }
 
 echo $error;
