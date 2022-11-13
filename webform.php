@@ -45,7 +45,7 @@ body, html {
 <?php
 // define variables and set to empty values
 $nameErr = $emailErr = $genderErr = $websiteErr = "";
-$name = $email = $gender = $comment = $website = "";
+$name = $email = $gender = $age = $comment = $website = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
@@ -110,6 +110,8 @@ function test_input($data) {
   <br><br>
   <span class="error"><?php echo $emailErr;?></span>
   <br><br>
+  Age: <input type="text" name="age" value="<?php echo $age;?>">
+  <br><br>
   Website: <input type="text" name="website" value="<?php echo $website;?>">
   <br><br>
   <span class="error"><?php echo $websiteErr;?></span>
@@ -132,8 +134,9 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['website']) &
 
 $txt = fopen('output.txt','a') or die("Unable to open file!");
         
-fwrite($txt, $_POST['name'].PHP_EOL);
+fwrite($txt, "Name: ".$_POST['name'].PHP_EOL);
 fwrite($txt, $_POST['email'].PHP_EOL);
+fwrite($txt, $_POST['age'].PHP_EOL);
 fwrite($txt, $_POST['website'].PHP_EOL);
 fwrite($txt, $_POST['comment'].PHP_EOL);
 fwrite($txt, $_POST['gender'].PHP_EOL);
@@ -147,7 +150,6 @@ fclose($txt);
 <?php
 echo "<h2>Your Input:</h2>";
 echo $name;
-echo $name;
 echo "<br>";
 echo $email;
 echo "<br>";
@@ -159,5 +161,6 @@ echo $gender;
 ?>
 
 </div>
+
 </body>
 </html>
