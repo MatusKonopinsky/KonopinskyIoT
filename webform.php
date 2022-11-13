@@ -99,7 +99,7 @@ fwrite($txt, "E-mail: ".$_POST['email'].PHP_EOL);
 fwrite($txt, "Gender: ".$_POST['gender'].PHP_EOL);
 fwrite($txt, "Age: ".$_POST['age'].PHP_EOL);
 fwrite($txt, "Occupation: ".$_POST['occupation'].PHP_EOL);
-fwrite($txt, "Permission level: ".$_POST["$permission"].PHP_EOL);
+fwrite($txt, "Permission level: ".$_POST['permission'].PHP_EOL);
 
 fwrite($txt, PHP_EOL);
 fclose($txt);
