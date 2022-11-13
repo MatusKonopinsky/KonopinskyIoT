@@ -2,7 +2,12 @@
 <html>
 <head>
 <style>
-body{
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.bg-image{
     background-image: url("road.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,6 +17,8 @@ body{
 </style>
 </head>
 <body>  
+
+<div class="bg-image"></div>
 
 <?php
 // define variables and set to empty values
