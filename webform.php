@@ -103,7 +103,7 @@ fwrite($txt, PHP_EOL);
 fclose($txt);
 
 } else{
-$error = "Some value is missing!"
+$error = "Some value is missing!";
 }
 
 echo $error;
