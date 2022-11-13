@@ -44,7 +44,7 @@ body, html {
 
 <?php
 // define variables and set to empty values
-$name = $email = $gender = $age = $occupation = $permission = $try = "";
+$name = $email = $gender = $age = $occupation = $permission = "";
 
 ?>
 
@@ -74,16 +74,9 @@ $name = $email = $gender = $age = $occupation = $permission = $try = "";
   <br><br>
 
   Permission level:
-  <input type="radio" name="$permission" <?php if (isset($permission) && $permission=="visitor") echo "checked";?> value="visitor">Visitor
-  <input type="radio" name="$permission" <?php if (isset($permission) && $permission=="user") echo "checked";?> value="user">User
-  <input type="radio" name="$permission" <?php if (isset($permission) && $permission=="admin") echo "checked";?> value="admin">Admin
-  <br><br>
-
-  Occupation:
-  <input type="radio" name="try" <?php if (isset($try) && $try=="student") echo "checked";?> value="student">Student
-  <input type="radio" name="try" <?php if (isset($try) && $try=="teacher") echo "checked";?> value="teacher">Teacher
-  <input type="radio" name="try" <?php if (isset($try) && $try=="other") echo "checked";?> value="other">Other 
-  <br><br>
+  <input type="radio" name="permission" <?php if (isset($permission) && $permission=="visitor") echo "checked";?> value="visitor">Visitor
+  <input type="radio" name="permission" <?php if (isset($permission) && $permission=="user") echo "checked";?> value="user">User
+  <input type="radio" name="permission" <?php if (isset($permission) && $permission=="admin") echo "checked";?> value="admin">Admin
   <br><br>
 
   <input type="submit" name="submit" value="Submit">  
@@ -97,7 +90,6 @@ $gender = $_POST["gender"];
 $age = $_POST["age"];
 $occupation = $_POST["occupation"];
 $permission = $_POST["permission"];
-$try = $_POST["try"];
 
 
 $txt = fopen('output.txt','w') or die("Unable to open file!");
@@ -124,8 +116,6 @@ echo "<br>";
 echo $occupation;
 echo "<br>";
 echo $permission;
-echo "<br>";
-echo $try;
 echo "<br>";
 
 
