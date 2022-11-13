@@ -7,11 +7,16 @@ body, html {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+* {
+  box-sizing: border-box;
+}
 .bg-image{
     background-image: url("road.jpg");
+    height: 100%; 
+  
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #333;
     filter: blur(8px);
 }
 </style>
