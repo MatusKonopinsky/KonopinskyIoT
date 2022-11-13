@@ -94,7 +94,7 @@ $comment = $_POST["comment"];
 
 if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['website']) && isset($_POST['comment']) && isset($_POST['gender'])){
 
-$txt = fopen('output.txt','a') or die("Unable to open file!");
+$txt = fopen('output.txt','w') or die("Unable to open file!");
         
 fwrite($txt, "Name: ".$_POST['name'].PHP_EOL);
 fwrite($txt, $_POST['email'].PHP_EOL);
