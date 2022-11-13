@@ -44,7 +44,7 @@ body, html {
 
 <?php
 // define variables and set to empty values
-$name = $email = $gender = $age = $comment = $occupation = "";
+$name = $email = $gender = $age = $occupation = $visitor = $user = $admin = "";
 
 ?>
 
@@ -60,14 +60,19 @@ $name = $email = $gender = $age = $comment = $occupation = "";
   Age: <input type="text" name="age" value="<?php echo $age;?>">
   <br><br>
 
-  Occupation: <input type="text" name="occupation" value="<?php echo $occupation;?>">
-  <input type="radio" name="occupation" <?php if (isset($occupation) && $gender=="female") echo "checked";?> value="student">Student
-  <input type="radio" name="occupation" <?php if (isset($occupation) && $gender=="male") echo "checked";?> value="teacher">Teacher
-  <input type="radio" name="occupation" <?php if (isset($occupation) && $gender=="other") echo "checked";?> value="other">Other 
+  Occupation:
+  <input type="radio" name="occupation" <?php if (isset($occupation) && $occupation=="student") echo "checked";?> value="student">Student
+  <input type="radio" name="occupation" <?php if (isset($occupation) && $occupation=="teacher") echo "checked";?> value="teacher">Teacher
+  <input type="radio" name="occupation" <?php if (isset($occupation) && $occupation=="other") echo "checked";?> value="other">Other 
   <br><br>
 
-  Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
-  <br><br>
+  Intention of visit: 
+  <input type="checkbox" id="visitor" name="visitor" value="<?php echo $visitor;?>">
+  <label for="visitor"> Looking for inspiration</label><br>
+  <input type="checkbox" id="user" name="user" value="<?php echo $user;?>">
+  <label for="user"> Want to edit</label><br>
+  <input type="checkbox" id="admin" name="admin" value="<?php echo $admin;?>">
+  <label for="admin"> Ask for admin privilege</label><br>
 
   Gender:
   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
@@ -80,21 +85,26 @@ $name = $email = $gender = $age = $comment = $occupation = "";
 
 <?php
 
+$name = $email = $gender = $age = $occupation = $visitor = $user = $admin = "";
+
 $name = $_POST["name"];
 $email = $_POST["email"];
 $gender = $_POST["gender"];
 $age = $_POST["age"];
-$website = $_POST["occupation"];
-$comment = $_POST["comment"];
+$occupation = $_POST["occupation"];
+$visitor = $_POST["visitor"];
+$user = $_POST["user"];
+$admin = $_POST["admin"];
 
 $txt = fopen('output.txt','w') or die("Unable to open file!");
         
 fwrite($txt, "Name: ".$_POST['name'].PHP_EOL);
 fwrite($txt, "E-mail: ".$_POST['email'].PHP_EOL);
+fwrite($txt, "Gender: ".$_POST['gender'].PHP_EOL);
 fwrite($txt, "Age: ".$_POST['age'].PHP_EOL);
-fwrite($txt, $_POST['website'].PHP_EOL);
-fwrite($txt, $_POST['comment'].PHP_EOL);
-fwrite($txt, $_POST['gender'].PHP_EOL);
+fwrite($txt, "Occupation".$_POST['occupation'].PHP_EOL);
+fwrite($txt, "Intention of visit: ".$_POST["visitor"]." ".$_POST["user"]." ".$_POST["admin"].PHP_EOL);
+
 fwrite($txt, PHP_EOL);
 fclose($txt);
 
