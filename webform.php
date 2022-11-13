@@ -5,7 +5,7 @@
 body, html {
   height: 100%;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 * {
   box-sizing: border-box;
@@ -44,7 +44,7 @@ body, html {
 
 <?php
 // define variables and set to empty values
-$name = $email = $gender = $age = $comment = $website = "";
+$name = $email = $gender = $age = $comment = $occupation = "";
 
 ?>
 
@@ -59,7 +59,11 @@ $name = $email = $gender = $age = $comment = $website = "";
 
   Age: <input type="text" name="age" value="<?php echo $age;?>">
   <br><br>
-  Website: <input type="text" name="website" value="<?php echo $website;?>">
+
+  Occupation: <input type="text" name="occupation" value="<?php echo $occupation;?>">
+  <input type="radio" name="occupation" <?php if (isset($occupation) && $gender=="female") echo "checked";?> value="student">Student
+  <input type="radio" name="occupation" <?php if (isset($occupation) && $gender=="male") echo "checked";?> value="teacher">Teacher
+  <input type="radio" name="occupation" <?php if (isset($occupation) && $gender=="other") echo "checked";?> value="other">Other 
   <br><br>
 
   Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
@@ -77,36 +81,22 @@ $name = $email = $gender = $age = $comment = $website = "";
 <?php
 
 $name = $_POST["name"];
-
 $email = $_POST["email"];
-
 $gender = $_POST["gender"];
-
 $age = $_POST["age"];
-
-$website = $_POST["website"];
-
+$website = $_POST["occupation"];
 $comment = $_POST["comment"];
-
-if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['website']) && isset($_POST['comment']) && isset($_POST['gender'])){
 
 $txt = fopen('output.txt','w') or die("Unable to open file!");
         
 fwrite($txt, "Name: ".$_POST['name'].PHP_EOL);
-fwrite($txt, $_POST['email'].PHP_EOL);
-fwrite($txt, $_POST['age'].PHP_EOL);
+fwrite($txt, "E-mail: ".$_POST['email'].PHP_EOL);
+fwrite($txt, "Age: ".$_POST['age'].PHP_EOL);
 fwrite($txt, $_POST['website'].PHP_EOL);
 fwrite($txt, $_POST['comment'].PHP_EOL);
 fwrite($txt, $_POST['gender'].PHP_EOL);
 fwrite($txt, PHP_EOL);
 fclose($txt);
-
-} else{
-echo "Some value is missing!";
-echo "<br>";
-}
-
-echo $error;
 
 echo "<h2>Your Input:</h2>";
 echo $name;
