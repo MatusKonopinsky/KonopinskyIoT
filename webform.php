@@ -111,10 +111,12 @@ echo $email;
 echo "<br>";
 echo $age;
 echo "<br>";
+echo $gender;
 echo "<br>";
 echo $occupation;
 echo "<br>";
 echo $permission;
+echo "<br>";
 
 
 ?>
