@@ -17,7 +17,7 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: blur(0px);
+    filter: blur(8px);
 }
 .bg-text {
   background-color: rgb(0,0,0); /* Fallback color */
@@ -44,7 +44,7 @@ body, html {
 
 <?php
 // define variables and set to empty values
-$nameErr = $emailErr = $genderErr = $websiteErr = "";
+$error = "";
 $name = $email = $gender = $age = $comment = $website = "";
 
 ?>
@@ -54,27 +54,24 @@ $name = $email = $gender = $age = $comment = $website = "";
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
   Name: <input type="text" name="name" value="<?php echo $name;?>">
   <br><br>
-  <span class="error"><?php echo $nameErr;?></span>
-  <br><br>
+
   E-mail: <input type="text" name="email" value="<?php echo $email;?>">
   <br><br>
-  <span class="error"><?php echo $emailErr;?></span>
-  <br><br>
+
   Age: <input type="text" name="age" value="<?php echo $age;?>">
   <br><br>
   Website: <input type="text" name="website" value="<?php echo $website;?>">
   <br><br>
-  <span class="error"><?php echo $websiteErr;?></span>
-  <br><br>
+
   Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
   <br><br>
+
   Gender:
   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="other">Other  
   <br><br>
-  <span class="error"><?php echo $genderErr;?></span>
-  <br><br>
+
   <input type="submit" name="submit" value="Submit">  
 </form>
 
@@ -105,7 +102,11 @@ fwrite($txt, $_POST['gender'].PHP_EOL);
 fwrite($txt, PHP_EOL);
 fclose($txt);
 
+} else{
+$error = "Some value is missing!"
 }
+
+echo $error;
 
 echo "<h2>Your Input:</h2>";
 echo $name;
