@@ -124,10 +124,11 @@ function test_input($data) {
 
 <?php
 
-$file1 = fopen("output.txt","w") or die("Unable to open file!");
+$file1 = "output.txt";
+$txt = fopen($file1,"w") or die("Unable to open file!");
         
-fwrite($file1, $name);
-fclose($file1);
+fwrite($txt, $name);
+fclose($txt);
 
 ?>
 
