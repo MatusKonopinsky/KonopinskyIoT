@@ -17,7 +17,7 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: blur(8px);
+    filter: blur(0px);
 }
 .bg-text {
   background-color: rgb(0,0,0); /* Fallback color */
