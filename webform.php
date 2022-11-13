@@ -130,13 +130,14 @@ function test_input($data) {
 
 if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['website']) && isset($_POST['comment']) && isset($_POST['gender'])){
 
-$txt = fopen('output.txt','w') or die("Unable to open file!");
+$txt = fopen('output.txt','a') or die("Unable to open file!");
         
 fwrite($txt, $_POST['name'].PHP_EOL);
-fwrite($txt, $_POST['email']);
-fwrite($txt, $_POST['website']);
-fwrite($txt, $_POST['comment']);
-fwrite($txt, $_POST['gender']);
+fwrite($txt, $_POST['email'].PHP_EOL);
+fwrite($txt, $_POST['website'].PHP_EOL);
+fwrite($txt, $_POST['comment'].PHP_EOL);
+fwrite($txt, $_POST['gender'].PHP_EOL);
+fwrite($txt, PHP_EOL);
 fclose($txt);
 
 }
