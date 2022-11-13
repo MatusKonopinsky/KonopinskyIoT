@@ -5,6 +5,7 @@
 body{
     background-image: url("boat.jpg");
     background-repeat: no-repeat;
+    background-size: auto;
     background-color: #333;
 }
 </style>
