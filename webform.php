@@ -44,7 +44,6 @@ body, html {
 
 <?php
 // define variables and set to empty values
-$error = "";
 $name = $email = $gender = $age = $comment = $website = "";
 
 ?>
@@ -103,7 +102,7 @@ fwrite($txt, PHP_EOL);
 fclose($txt);
 
 } else{
-$error = "Some value is missing!";
+echo "Some value is missing!";
 }
 
 echo $error;
