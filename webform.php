@@ -51,7 +51,7 @@ $name = $email = $gender = $comment = $website = "";
 
 <h2>Webform</h2>
 
-<form method="post" action="<?php echo htmlspecialchars($_GET["name"]);?>">  
+<form>  
   Name: <input type="text" name="name" value="<?php echo $name;?>">
   <span class="error"><?php echo $nameErr;?></span>
   <br><br>
