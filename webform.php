@@ -24,7 +24,7 @@ fclose($file1);*/
 <h2>Webform</h2>
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-  Name: <input type="text" name="name" value="<?php echo $name;?>">
+  Name: <input type="text" name="name">
   <span class="error">* <?php echo $nameErr;?></span>
   <br><br>
   E-mail: <input type="text" name="email" value="<?php echo $email;?>">
