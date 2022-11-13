@@ -44,7 +44,7 @@ body, html {
 
 <?php
 // define variables and set to empty values
-$name = $email = $gender = $age = $occupation = $visitor = $user = $admin = "";
+$name = $email = $gender = $age = $occupation = $permission = "";
 
 ?>
 
@@ -66,13 +66,11 @@ $name = $email = $gender = $age = $occupation = $visitor = $user = $admin = "";
   <input type="radio" name="occupation" <?php if (isset($occupation) && $occupation=="other") echo "checked";?> value="other">Other 
   <br><br>
 
-  Intention of visit: 
-  <input type="checkbox" id="visitor" name="visitor" value="<?php echo $visitor;?>">
-  <label for="visitor"> Looking for inspiration</label><br>
-  <input type="checkbox" id="user" name="user" value="<?php echo $user;?>">
-  <label for="user"> Want to edit</label><br>
-  <input type="checkbox" id="admin" name="admin" value="<?php echo $admin;?>">
-  <label for="admin"> Ask for admin privilege</label><br>
+  Permission level:
+  <input type="radio" name="$permission" <?php if (isset($permission) && $permission=="visitor") echo "checked";?> value="visitor">Visitor
+  <input type="radio" name="$permission" <?php if (isset($permission) && $permission=="user") echo "checked";?> value="user">User
+  <input type="radio" name="$permission" <?php if (isset($permission) && $permission=="admin") echo "checked";?> value="admin">Admin
+  <br><br>
 
   Gender:
   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
@@ -85,16 +83,13 @@ $name = $email = $gender = $age = $occupation = $visitor = $user = $admin = "";
 
 <?php
 
-$name = $email = $gender = $age = $occupation = $visitor = $user = $admin = "";
-
 $name = $_POST["name"];
 $email = $_POST["email"];
 $gender = $_POST["gender"];
 $age = $_POST["age"];
 $occupation = $_POST["occupation"];
-$visitor = $_POST["visitor"];
-$user = $_POST["user"];
-$admin = $_POST["admin"];
+$permission = $_POST["$permission"];
+
 
 $txt = fopen('output.txt','w') or die("Unable to open file!");
         
@@ -103,7 +98,7 @@ fwrite($txt, "E-mail: ".$_POST['email'].PHP_EOL);
 fwrite($txt, "Gender: ".$_POST['gender'].PHP_EOL);
 fwrite($txt, "Age: ".$_POST['age'].PHP_EOL);
 fwrite($txt, "Occupation: ".$_POST['occupation'].PHP_EOL);
-fwrite($txt, "Intention of visit: ".$_POST["visitor"]." ".$_POST["user"]." ".$_POST["admin"].PHP_EOL);
+fwrite($txt, "Permission level: ".$_POST["$permission"].PHP_EOL);
 
 fwrite($txt, PHP_EOL);
 fclose($txt);
@@ -117,7 +112,7 @@ echo $age;
 echo "<br>";
 echo $occupation;
 echo "<br>";
-echo $visitor.", ".$user.", ".$admin;
+echo $permission;
 echo "<br>";
 echo $gender;
 ?>
