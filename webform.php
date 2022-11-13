@@ -117,7 +117,7 @@ echo $age;
 echo "<br>";
 echo $occupation;
 echo "<br>";
-echo $visitor;
+echo $visitor.", ".$user.", ".$admin;
 echo "<br>";
 echo $gender;
 ?>
