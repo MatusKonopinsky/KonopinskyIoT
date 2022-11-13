@@ -20,8 +20,8 @@ body, html {
     filter: blur(8px);
 }
 .bg-text {
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.4);
   color: white;
   font-weight: bold;
 
@@ -92,7 +92,7 @@ $occupation = $_POST["occupation"];
 $permission = $_POST["permission"];
 
 
-$txt = fopen('output.txt','w') or die("Unable to open file!");
+$txt = fopen('output.txt','a') or die("Unable to open file!");
         
 fwrite($txt, "Name: ".$_POST['name'].PHP_EOL);
 fwrite($txt, "E-mail: ".$_POST['email'].PHP_EOL);
@@ -115,10 +115,8 @@ echo "Gender: ".$gender;
 echo "<br>";
 echo "Occupation: ".$occupation;
 echo "<br>";
-echo "Permission: ".$permission;
+echo "Permission level: ".$permission;
 echo "<br>";
-
-
 ?>
 
 </div>
