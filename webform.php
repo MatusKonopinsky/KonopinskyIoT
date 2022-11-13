@@ -88,7 +88,7 @@ $email = $_POST["email"];
 $gender = $_POST["gender"];
 $age = $_POST["age"];
 $occupation = $_POST["occupation"];
-$permission = $_POST["$permission"];
+$permission = $_POST["permission"];
 
 
 $txt = fopen('output.txt','w') or die("Unable to open file!");
