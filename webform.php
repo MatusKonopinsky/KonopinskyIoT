@@ -52,7 +52,7 @@ $name = $email = $gender = $comment = $website = "";
 <h2>Webform</h2>
 
 <form>  
-  Name: <input type="text" name="name" value="<?php echo $name;?>">
+  Name: <input type="text" name="name" value="<?php $_GET["name"];?>">
   <span class="error"><?php echo $nameErr;?></span>
   <br><br>
   E-mail: <input type="text" name="email" value="<?php echo $email;?>">
