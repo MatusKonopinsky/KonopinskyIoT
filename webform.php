@@ -107,15 +107,15 @@ fclose($txt);
 echo "<h2>Entered data:</h2>";
 echo "Name: ".$name;
 echo "<br>";
-echo $email;
+echo "E-mail: ".$email;
 echo "<br>";
-echo $age;
+echo "Age: ".$age;
 echo "<br>";
-echo $gender;
+echo "Gender: ".$gender;
 echo "<br>";
-echo $occupation;
+echo "Occupation: ".$occupation;
 echo "<br>";
-echo $permission;
+echo "Permission: ".$permission;
 echo "<br>";
 
 
