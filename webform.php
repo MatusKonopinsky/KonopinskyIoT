@@ -101,7 +101,7 @@ function test_input($data) {
 
 <h2>Webform</h2>
 
-<form>  
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
   Name: <input type="text" name="name" value="<?php $_GET["name"];?>">
   <span class="error"><?php echo $nameErr;?></span>
   <br><br>
