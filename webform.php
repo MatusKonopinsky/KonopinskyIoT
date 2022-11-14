@@ -45,7 +45,7 @@ body, html {
 <?php
 // define variables and set to empty values
 $name = $email = $gender = $age = $occupation = $permission = "";
-$txt = fopen('output.txt','w') or die("Unable to open file!");
+$txt = fopen('output.txt','a') or die("Unable to open file!");
 ?>
 
 <h2>Webform</h2>
