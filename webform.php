@@ -49,7 +49,17 @@ $name = $email = $gender = $age = $occupation = $permission = "";
 
 <h2>Webform</h2>
 
-<form method="post" action="<?php echo htmlspecialchars($_SERVER[""]); $txt = fopen('output.txt','a') or die("Unable to open file!");;?>">
+<form method="post" action="<?php echo htmlspecialchars($_SERVER[""]); 
+$txt = fopen('output.txt','a') or die("Unable to open file!");
+fwrite($txt, "Name: ".$_POST['name'].PHP_EOL);
+fwrite($txt, "E-mail: ".$_POST['email'].PHP_EOL);
+fwrite($txt, "Gender: ".$_POST['gender'].PHP_EOL);
+fwrite($txt, "Age: ".$_POST['age'].PHP_EOL);
+fwrite($txt, "Occupation: ".$_POST['occupation'].PHP_EOL);
+fwrite($txt, "Permission level: ".$_POST['permission'].PHP_EOL);
+
+fwrite($txt, PHP_EOL);
+fclose($txt);?>">
   Name: <input type="text" name="name" value="<?php echo $name;?>">
   <br><br>
 
@@ -93,7 +103,7 @@ $permission = $_POST["permission"];
 
 //$txt = fopen('output.txt','w') or die("Unable to open file!");
         
-fwrite($txt, "Name: ".$_POST['name'].PHP_EOL);
+/*fwrite($txt, "Name: ".$_POST['name'].PHP_EOL);
 fwrite($txt, "E-mail: ".$_POST['email'].PHP_EOL);
 fwrite($txt, "Gender: ".$_POST['gender'].PHP_EOL);
 fwrite($txt, "Age: ".$_POST['age'].PHP_EOL);
@@ -101,7 +111,7 @@ fwrite($txt, "Occupation: ".$_POST['occupation'].PHP_EOL);
 fwrite($txt, "Permission level: ".$_POST['permission'].PHP_EOL);
 
 fwrite($txt, PHP_EOL);
-fclose($txt);
+fclose($txt);*/
 
 echo "<h2>Entered data:</h2>";
 echo "Name: ".$name;
