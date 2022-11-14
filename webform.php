@@ -45,27 +45,12 @@ body, html {
 <?php
 // define variables and set to empty values
 $name = $email = $gender = $age = $occupation = $permission = "";
+
 ?>
 
 <h2>Webform</h2>
 
-<form method="post" action="<?php echo htmlspecialchars($_SERVER[""]); 
-$name = $_POST["name"];
-$email = $_POST["email"];
-$gender = $_POST["gender"];
-$age = $_POST["age"];
-$occupation = $_POST["occupation"];
-$permission = $_POST["permission"];
-$txt = fopen('output.txt','a') or die("Unable to open file!");
-fwrite($txt, "Name: ".$_POST['name'].PHP_EOL);
-fwrite($txt, "E-mail: ".$_POST['email'].PHP_EOL);
-fwrite($txt, "Gender: ".$_POST['gender'].PHP_EOL);
-fwrite($txt, "Age: ".$_POST['age'].PHP_EOL);
-fwrite($txt, "Occupation: ".$_POST['occupation'].PHP_EOL);
-fwrite($txt, "Permission level: ".$_POST['permission'].PHP_EOL);
-
-fwrite($txt, PHP_EOL);
-fclose($txt);?>">
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
   Name: <input type="text" name="name" value="<?php echo $name;?>">
   <br><br>
 
@@ -99,25 +84,37 @@ fclose($txt);?>">
 
 <?php
 
-/*$name = $_POST["name"];
+$name = $_POST["name"];
 $email = $_POST["email"];
 $gender = $_POST["gender"];
 $age = $_POST["age"];
 $occupation = $_POST["occupation"];
-$permission = $_POST["permission"];*/
+$permission = $_POST["permission"];
 
 
-//$txt = fopen('output.txt','w') or die("Unable to open file!");
-        
-/*fwrite($txt, "Name: ".$_POST['name'].PHP_EOL);
-fwrite($txt, "E-mail: ".$_POST['email'].PHP_EOL);
-fwrite($txt, "Gender: ".$_POST['gender'].PHP_EOL);
-fwrite($txt, "Age: ".$_POST['age'].PHP_EOL);
-fwrite($txt, "Occupation: ".$_POST['occupation'].PHP_EOL);
-fwrite($txt, "Permission level: ".$_POST['permission'].PHP_EOL);
+$txt = fopen('output.txt','a') or die("Unable to open file!");
+
+if(isset($name)){
+  fwrite($txt, "Name: ".$_POST['name'].PHP_EOL);
+}
+if(isset($email)){
+  fwrite($txt, "E-mail: ".$_POST['email'].PHP_EOL);
+}
+if(isset($gender)){
+  fwrite($txt, "Gender: ".$_POST['gender'].PHP_EOL);
+}
+if(isset($age)){
+  fwrite($txt, "Age: ".$_POST['age'].PHP_EOL);
+}
+if(isset($occupation)){
+  fwrite($txt, "Occupation: ".$_POST['occupation'].PHP_EOL);
+}
+if(isset($permission)){
+  fwrite($txt, "Permission level: ".$_POST['permission'].PHP_EOL);
+}
 
 fwrite($txt, PHP_EOL);
-fclose($txt);*/
+fclose($txt);
 
 echo "<h2>Entered data:</h2>";
 echo "Name: ".$name;
