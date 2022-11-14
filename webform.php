@@ -45,12 +45,12 @@ body, html {
 <?php
 // define variables and set to empty values
 $name = $email = $gender = $age = $occupation = $permission = "";
-
+$txt = fopen('output.txt','w') or die("Unable to open file!");
 ?>
 
 <h2>Webform</h2>
 
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+<form method="post" action="/output.txt">
   Name: <input type="text" name="name" value="<?php echo $name;?>">
   <br><br>
 
@@ -92,7 +92,7 @@ $occupation = $_POST["occupation"];
 $permission = $_POST["permission"];
 
 
-$txt = fopen('output.txt','w') or die("Unable to open file!");
+//$txt = fopen('output.txt','w') or die("Unable to open file!");
         
 fwrite($txt, "Name: ".$_POST['name'].PHP_EOL);
 fwrite($txt, "E-mail: ".$_POST['email'].PHP_EOL);
