@@ -50,6 +50,12 @@ $name = $email = $gender = $age = $occupation = $permission = "";
 <h2>Webform</h2>
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER[""]); 
+$name = $_POST["name"];
+$email = $_POST["email"];
+$gender = $_POST["gender"];
+$age = $_POST["age"];
+$occupation = $_POST["occupation"];
+$permission = $_POST["permission"];
 $txt = fopen('output.txt','a') or die("Unable to open file!");
 fwrite($txt, "Name: ".$_POST['name'].PHP_EOL);
 fwrite($txt, "E-mail: ".$_POST['email'].PHP_EOL);
@@ -93,12 +99,12 @@ fclose($txt);?>">
 
 <?php
 
-$name = $_POST["name"];
+/*$name = $_POST["name"];
 $email = $_POST["email"];
 $gender = $_POST["gender"];
 $age = $_POST["age"];
 $occupation = $_POST["occupation"];
-$permission = $_POST["permission"];
+$permission = $_POST["permission"];*/
 
 
 //$txt = fopen('output.txt','w') or die("Unable to open file!");
