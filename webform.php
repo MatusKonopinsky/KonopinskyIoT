@@ -49,7 +49,7 @@ $name = $email = $gender = $age = $occupation = $permission = "";
 
 <h2>Webform</h2>
 
-<form method="post" action="<?php echo htmlspecialchars($_SERVER[""]); $txt = fopen('output.txt','w') or die("Unable to open file!");;?>">
+<form method="post" action="<?php echo htmlspecialchars($_SERVER[""]); $txt = fopen('output.txt','a') or die("Unable to open file!");;?>">
   Name: <input type="text" name="name" value="<?php echo $name;?>">
   <br><br>
 
