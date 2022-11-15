@@ -38,6 +38,7 @@ body, html {
 .reset {
   position: absolute;
   top: 600px;
+  left: 1050px;
   border: none;
   color: white;
   padding: 16px 32px;
