@@ -97,19 +97,19 @@ $txt = fopen('output.txt','a') or die("Unable to open file!");
 if(isset($_POST['name'])){
   fwrite($txt, "Name: ".$_POST['name'].PHP_EOL);
 }
-if(isset($email)){
+if(isset($_POST['email'])){
   fwrite($txt, "E-mail: ".$_POST['email'].PHP_EOL);
 }
-if(isset($gender)){
+if(isset($_POST['gender'])){
   fwrite($txt, "Gender: ".$_POST['gender'].PHP_EOL);
 }
-if(isset($age)){
+if(isset($_POST['age'])){
   fwrite($txt, "Age: ".$_POST['age'].PHP_EOL);
 }
-if(isset($occupation)){
+if(isset($_POST['occupation'])){
   fwrite($txt, "Occupation: ".$_POST['occupation'].PHP_EOL);
 }
-if(isset($permission)){
+if(isset($_POST['permission'])){
   fwrite($txt, "Permission level: ".$_POST['permission'].PHP_EOL);
 }
 
