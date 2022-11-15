@@ -37,10 +37,10 @@ body, html {
 .button{
   position: absolute;
   top: 500px;
-  left: 1000px;
+  left: 110px;
   border: none;
   color: white;
-  padding: 16px 32px;
+  padding: 16px 18px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
