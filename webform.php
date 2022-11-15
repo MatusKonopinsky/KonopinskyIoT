@@ -35,6 +35,9 @@ body, html {
   text-align: center;
 }
 .button{
+  position: absolute;
+  top: 100px;
+  left: 40px;
   border: none;
   color: white;
   padding: 16px 32px;
@@ -46,6 +49,7 @@ body, html {
   transition-duration: 0.4s;
   cursor: pointer;
 }
+
 </style>
 </head>
 <body>  
