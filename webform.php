@@ -37,7 +37,7 @@ body, html {
 
 .reset {
   position: absolute;
-  top: 400px;
+  top: 550px;
   left: 1020px;
   border: none;
   color: white;
