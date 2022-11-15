@@ -138,7 +138,7 @@ echo "Permission level: ".$permission;
 echo "<br>";
 ?>
 
-<button type="button" onclick="<?php fopen('output.txt','w') or die("Unable to open file!"); fwrite($txt, PHP_EOL); fclose($txt);?>" class="button">Reset txt file</button>
+<button type="button" onclick="<?php fopen('output.txt','w') or die("Unable to open file!"); fclose($txt);?>" class="button">Reset txt file</button>
 
 </div>
 
