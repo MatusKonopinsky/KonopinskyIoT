@@ -141,7 +141,7 @@ echo "<br>";
 <button type="button" onclick="alert('Hello world!')" class="button" name="reset">Reset txt file</button>
 
 <?php
-  if(isset($_POST['submit'])){
+  if(isset($_POST['reset'])){
     $txt = fopen('output.txt','w') or die("Unable to open file!");
     fwrite($txt, PHP_EOL);
     fclose($txt);
