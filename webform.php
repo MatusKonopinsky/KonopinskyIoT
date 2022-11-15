@@ -84,12 +84,12 @@ $name = $email = $gender = $age = $occupation = $permission = "";
 
 <?php
 
-$name = $_POST["name"];
+/*$name = $_POST["name"];
 $email = $_POST["email"];
 $gender = $_POST["gender"];
 $age = $_POST["age"];
 $occupation = $_POST["occupation"];
-$permission = $_POST["permission"];
+$permission = $_POST["permission"];*/
 
 
 $txt = fopen('output.txt','w') or die("Unable to open file!");
@@ -117,17 +117,17 @@ fwrite($txt, PHP_EOL);
 fclose($txt);
 
 echo "<h2>Entered data:</h2>";
-echo "Name: ".$name;
+echo "Name: ".$_POST['name'];
 echo "<br>";
-echo "E-mail: ".$email;
+echo "E-mail: ".$_POST['email'];
 echo "<br>";
-echo "Age: ".$age;
+echo "Age: ".$_POST['age'];
 echo "<br>";
-echo "Gender: ".$gender;
+echo "Gender: "$_POST['gender'];
 echo "<br>";
-echo "Occupation: ".$occupation;
+echo "Occupation: ".$_POST['occupation'];
 echo "<br>";
-echo "Permission level: ".$permission;
+echo "Permission level: ".$_POST['permission'];
 echo "<br>";
 ?>
 
