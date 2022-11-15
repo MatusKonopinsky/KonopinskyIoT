@@ -122,6 +122,8 @@ echo "Permission level: ".$permission;
 echo "<br>";
 ?>
 
+<button type="button" onclick="alert('Hello world!')">Click Me!</button>
+
 </div>
 
 </body>
