@@ -45,6 +45,7 @@ body, html {
   font-size: 16px;
   margin: 4px 2px;
   transition-duration: 0.4s;
+  cursor: pointer;
 }
 .reset:hover {
   background-color: #4CAF50;
