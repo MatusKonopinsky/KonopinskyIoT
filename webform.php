@@ -138,7 +138,15 @@ echo "Permission level: ".$permission;
 echo "<br>";
 ?>
 
-<button type="button" onclick="alert('Hello world!')" class="button">Reset txt file</button>
+<button type="button" onclick="alert('Hello world!')" class="button" name="reset">Reset txt file</button>
+
+<?php
+  if(isset($_POST['submit'])){
+    $txt = fopen('output.txt','a') or die("Unable to open file!");
+    fwrite($txt, PHP_EOL);
+    fclose($txt);
+  }
+?>
 
 </div>
 
