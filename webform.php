@@ -84,50 +84,41 @@ $name = $email = $gender = $age = $occupation = $permission = "";
 
 <?php
 
-/*$name = $_POST["name"];
+$name = $_POST["name"];
 $email = $_POST["email"];
 $gender = $_POST["gender"];
 $age = $_POST["age"];
 $occupation = $_POST["occupation"];
-$permission = $_POST["permission"];*/
+$permission = $_POST["permission"];
 
 
-$txt = fopen('output.txt','w') or die("Unable to open file!");
 
-if(isset($_POST['name'])){
+
+if(isset($_POST['submit'])){
+  $txt = fopen('output.txt','w') or die("Unable to open file!");
   fwrite($txt, "Name: ".$_POST['name'].PHP_EOL);
-}
-if(isset($_POST['email'])){
   fwrite($txt, "E-mail: ".$_POST['email'].PHP_EOL);
-}
-if(isset($_POST['gender'])){
   fwrite($txt, "Gender: ".$_POST['gender'].PHP_EOL);
-}
-if(isset($_POST['age'])){
   fwrite($txt, "Age: ".$_POST['age'].PHP_EOL);
-}
-if(isset($_POST['occupation'])){
   fwrite($txt, "Occupation: ".$_POST['occupation'].PHP_EOL);
-}
-if(isset($_POST['permission'])){
   fwrite($txt, "Permission level: ".$_POST['permission'].PHP_EOL);
+  fwrite($txt, PHP_EOL);
+  fclose($txt);
 }
 
-fwrite($txt, PHP_EOL);
-fclose($txt);
 
 echo "<h2>Entered data:</h2>";
-echo "Name: ".$_POST['name'];
+echo "Name: ".$name;
 echo "<br>";
-echo "E-mail: ".$_POST['email'];
+echo "E-mail: ".$email;
 echo "<br>";
-echo "Age: ".$_POST['age'];
+echo "Age: ".$age;
 echo "<br>";
-echo "Gender: "$_POST['gender'];
+echo "Gender: ".$gender;
 echo "<br>";
-echo "Occupation: ".$_POST['occupation'];
+echo "Occupation: ".$occupation;
 echo "<br>";
-echo "Permission level: ".$_POST['permission'];
+echo "Permission level: ".$permission;
 echo "<br>";
 ?>
 
