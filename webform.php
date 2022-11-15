@@ -36,7 +36,7 @@ body, html {
 }
 .button{
   position: absolute;
-  top: 600px;
+  top: 500px;
   left: 900px;
   border: none;
   color: white;
