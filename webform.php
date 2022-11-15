@@ -36,8 +36,8 @@ body, html {
 }
 .button{
   position: absolute;
-  top: 100px;
-  left: 40px;
+  top: 400px;
+  left: 400px;
   border: none;
   color: white;
   padding: 16px 32px;
