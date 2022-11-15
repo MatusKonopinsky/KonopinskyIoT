@@ -36,6 +36,8 @@ body, html {
 }
 
 .reset {
+  position: absolute;
+  top: 600px;
   border: none;
   color: white;
   padding: 16px 32px;
