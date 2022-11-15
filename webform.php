@@ -44,6 +44,11 @@ body, html {
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
+  transition-duration: 0.4s;
+}
+.reset:hover {
+  background-color: #4CAF50;
+  color: white;
 }
 
 </style>
