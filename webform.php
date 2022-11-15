@@ -125,7 +125,7 @@ echo "<br>";
 
 <form method="post">
 
-  <input type="submit" name="submit1" value="Submit">  
+  <input type="submit" name="submit1" value="Reset txt file">  
 </form>
 
 <?php
