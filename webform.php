@@ -95,7 +95,7 @@ $permission = $_POST["permission"];
 
 
 if(isset($_POST['submit'])){
-  $txt = fopen('output.txt','w') or die("Unable to open file!");
+  $txt = fopen('output.txt','a') or die("Unable to open file!");
   fwrite($txt, "Name: ".$_POST['name'].PHP_EOL);
   fwrite($txt, "E-mail: ".$_POST['email'].PHP_EOL);
   fwrite($txt, "Gender: ".$_POST['gender'].PHP_EOL);
