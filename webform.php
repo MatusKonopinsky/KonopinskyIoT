@@ -142,7 +142,7 @@ echo "<br>";
 
 <?php
   if(isset($_POST['submit'])){
-    $txt = fopen('output.txt','a') or die("Unable to open file!");
+    $txt = fopen('output.txt','w') or die("Unable to open file!");
     fwrite($txt, PHP_EOL);
     fclose($txt);
   }
