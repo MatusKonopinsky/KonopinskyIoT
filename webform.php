@@ -34,21 +34,6 @@ body, html {
   padding: 20px;
   text-align: center;
 }
-.button{
-  position: absolute;
-  top: 500px;
-  left: 1050px;
-  border: none;
-  color: white;
-  padding: 16px 18px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
 
 </style>
 </head>
@@ -138,10 +123,13 @@ echo "Permission level: ".$permission;
 echo "<br>";
 ?>
 
-<button type="button" onclick="alert('Reseted')" class="button" name="reset" value="reset">Reset txt file</button>
+<form method="post">
+
+  <input type="submit" name="submit1" value="Submit">  
+</form>
 
 <?php
-  if(isset($_POST['reset'])){
+  if(isset($_POST['submit1'])){
     $txt = fopen('output.txt','w') or die("Unable to open file!");
     fwrite($txt, PHP_EOL);
     fclose($txt);
