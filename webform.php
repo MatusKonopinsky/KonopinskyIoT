@@ -41,7 +41,7 @@ body, html {
   left: 1020px;
   border: 2px solid black;
   background-color: transparent;
-  color: black;
+  color: white;
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
