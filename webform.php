@@ -40,7 +40,7 @@ body, html {
   top: 500px;
   left: 1020px;
   border: 2px solid black;
-  background-color: white;
+  background-color: transparent;
   color: black;
   padding: 16px 32px;
   text-align: center;
