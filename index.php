@@ -122,6 +122,11 @@
 </head>
 
 <body>
+<?php
+    
+
+    $name = $surname = $tel_num = $email = $gender = $status = $gamer = "";
+?>
 
 <header>
    
