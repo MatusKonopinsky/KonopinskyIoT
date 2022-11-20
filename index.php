@@ -17,7 +17,6 @@
             width: 70%;
             margin: 1% auto;
             background-position: center top;
-            background-image: url(background1.jpg);
             background-attachment: fixed;
             color: black;
         }
