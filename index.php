@@ -8,6 +8,117 @@
     <link rel="stylesheet" href="CSS.css" type="text/css">
     <link rel="shortcut icon" href="image-bonfire-icon.png" type="image/icon type">
     <title>IoT Zadanie 2</title>
+    <style>
+        html,body{
+    margin:0;
+    padding:0;
+        }
+
+        body {
+            width: 70%;
+            margin: 1% auto;
+            background-position: center top;
+            background-image: url(background1.jpg);
+            background-attachment: fixed;
+            color: black;
+        }
+
+        header,article {
+            display: block;
+            width: 700px;
+            margin: auto;
+            padding: 5px 30px 5px 30px;
+        }
+        
+        header {
+            height: 160px;
+            text-align: center;
+            position: relative;
+            animation: animation 7s linear 3s infinite alternate;
+        }
+        
+        article {
+            min-height: 200px;
+            border: 1px solid blueviolet;
+            border-radius: 20px;
+            box-shadow: 10px 10px 40px 0px #150063 inset;   
+            background-color: #ffffff;
+            opacity: 0.8;
+            filter: alpha(opacity=80);
+            font-size: 15px;
+            font-family: 'Dancing Script', 'Palatino Linotype', Georgia, 'Times New Roman';
+            font-weight: bold;
+            color: black;
+        } 
+
+        form {
+            padding: 2rem;
+        }
+                
+        h1.b {
+        text-shadow: none;
+        font-size: 55px;
+        font-family: Akzidenz-Grotesk, Clarendon, Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+        color: dark silver;
+        }   
+
+        input {
+            border-radius: 5px;
+            border-style: none;
+            border-color: blueviolet;
+            padding: 0.5rem;
+            text-align: center;
+            background-color: aliceblue;
+        }
+
+        input[type="text"] {
+            font-size: 15px;
+            font-family: 'Palatino Linotype', Georgia, 'Times New Roman';
+            font-weight: bold;
+            color: black;
+        }
+
+        input[type="radio"] {
+            margin-left: 20px;
+            font-size: 15px;
+            font-family: 'Palatino Linotype', Georgia, 'Times New Roman';
+            font-weight: bold;
+            color: black;
+        }
+
+        input[type="submit"] {
+            border-style: solid;
+            font-size: 20px;
+            font-family: 'Dancing Script', 'Palatino Linotype', Georgia, 'Times New Roman';
+            font-weight: bold;
+            color: white;
+            background-color: red;
+        }
+
+        input[type="submit"]:hover {
+            border-style: solid;
+            background-color: blue;
+            cursor: pointer;
+        }
+
+        .error {
+            margin-right: 50px;
+            color: red; 
+        }
+
+        .error2 {
+            color: red; 
+        }
+
+
+        @keyframes animation {
+            0%   {color: black; left:0px;}
+            25%  {color: red; left:-200px;}
+            50%  {color: white; left:0px;}
+            75%  {color: green; left:200px;}
+            100% {color: black; left:0px;}
+        }
+    </style>
 </head>
 
 <body>
