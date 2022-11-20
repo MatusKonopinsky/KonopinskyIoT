@@ -192,13 +192,13 @@
 <?php
 
 
-    $name = $_POST["name"];
+    /*$name = $_POST["name"];
     $surname = $_POST["surname"];
     $tel_num = $_POST["tel_num"]
     $email = $_POST["email"];
     $gender = $_POST["gender"];
     $status = $_POST["status"];
-    $gamer = $_POST["gamer"];
+    $gamer = $_POST["gamer"];*/
 
     /*if(isset($_POST['submit'])){
         $file1 = fopen("output.txt","w") or die("Unable to open file!");
