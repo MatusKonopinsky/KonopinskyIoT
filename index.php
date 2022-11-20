@@ -200,7 +200,7 @@
     $status = $_POST["status"];
     $gamer = $_POST["gamer"];
 
-    if(isset($_POST['submit'])){
+    /*if(isset($_POST['submit'])){
         $file1 = fopen("output.txt","w") or die("Unable to open file!");
         fwrite($file1, "Meno: ".$_POST['name'].PHP_EOL);
         fwrite($file1, "Priezvisko: ".$_POST['surname'].PHP_EOL);
@@ -210,17 +210,11 @@
         fwrite($file1, "Socialný status: ".$_POST['status'].PHP_EOL);
         fwrite($file1, "Je God Gamer?: ".$_POST['gamer'].PHP_EOL);
         fclose($file1);
-    }
+    }*/
 
     
 ?>
-<<<<<<< HEAD
-
-
 
 </body>
 
 </html>
-
-
->>>>>>> b507ae8aa09ffce10f886829dbd40e8c775fa494
