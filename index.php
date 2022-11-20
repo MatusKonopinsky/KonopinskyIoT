@@ -17,6 +17,7 @@
             width: 70%;
             margin: 1% auto;
             background-position: center top;
+            background-image: url(https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_960_720.jpg);
             background-attachment: fixed;
             color: black;
         }
