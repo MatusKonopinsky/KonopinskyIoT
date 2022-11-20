@@ -190,9 +190,7 @@
 </article>
 
 <?php
-    
 
-    $name = $surname = $tel_num = $email = $gender = $status = $gamer = "";
 
     $name = $_POST["name"];
     $surname = $_POST["surname"];
