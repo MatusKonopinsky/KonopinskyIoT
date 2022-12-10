@@ -1,3 +1,12 @@
+<!doctype html>
+<html>
+<head>
+        <meta charset="UTF-8">
+</head>
+<body>
+        <h1>Index 4 site</h1>
+
+
 <?php
         echo '<h1> Index3.php .txt</h1>';
 
@@ -21,3 +30,5 @@
         echo $text3;
         fclose($file3);
     ?>
+ </body>
+</html>
