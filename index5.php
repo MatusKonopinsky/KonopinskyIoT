@@ -8,7 +8,7 @@
 
 
 <?php
-        echo '<h1> Index3.php .txt</h1>';
+        echo 'Index3.php .txt';
 
 
         $sn1 = $_GET["a"];
