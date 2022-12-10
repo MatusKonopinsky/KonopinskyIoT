@@ -1,3 +1,9 @@
+<!doctype html>
+<html>
+<head>
+        <meta charset="UTF-8">
+</head>
+<body>
 <?php
         
         $sn1 = $_GET["a"];
@@ -19,3 +25,7 @@
         echo $text3;
         fclose($file3);
     ?>
+        
+      
+</body>
+</html>
