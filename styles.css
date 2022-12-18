@@ -46,14 +46,14 @@ body {
   overflow: hidden;
   position: absolute;
   top: 30%;
-  left: 50%;
+  left: 10%;
 }
 
 /* Style the topnav links */
 .topnav a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
