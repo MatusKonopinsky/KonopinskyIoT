@@ -55,7 +55,7 @@
             $search_string = "Temperature";
 
             foreach ($lines_array as $line) {
-                f(strpos($line, $search_string) !== false){
+                if(strpos($line, $search_string) !== false){
                     list(, $new_str) = explode(":", $line);
                     $new_str = trim($new_str);
                 }
