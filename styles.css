@@ -44,8 +44,7 @@ body {
 
 .topnav {
   overflow: hidden;
-  top: 40%;
-  left: 50%;
+  position: absolute;
 }
 
 /* Style the topnav links */
