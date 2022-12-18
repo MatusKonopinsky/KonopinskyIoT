@@ -51,6 +51,7 @@
     <?php
 
 $temperature = $_POST["temperature"];
+
 if(isset($_POST['lights'])){
   $lights = $_POST["lights"];
 }
@@ -61,8 +62,20 @@ if(isset($_POST['water'])){
 if(isset($_POST['submit'])){
   $txt = fopen('inputData.txt','w') or die("Unable to open file!");
   fwrite($txt, "Temperature: ".$_POST['temperature'].PHP_EOL);
-  fwrite($txt, "Lights: ".$_POST['lights'].PHP_EOL);
-  fwrite($txt, "Water: ".$_POST['water'].PHP_EOL);
+
+  if(isset($_POST['lights'])){
+    fwrite($txt, "Lights: ".$_POST['lights'].PHP_EOL);
+  }
+  else{
+    fwrite($txt, "Lights: "."off".PHP_EOL);
+  }
+  if(isset($_POST['water'])){
+    fwrite($txt, "Water: ".$_POST['water'].PHP_EOL);
+  }
+  else{
+    fwrite($txt, "Water: "."off".PHP_EOL);
+  }
+
   fclose($txt);
 }
 
