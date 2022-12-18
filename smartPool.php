@@ -13,7 +13,7 @@
 <body>
     <?php
         // define variables and set to empty values
-        $name = $email = $gender = $age = $occupation = $permission = "";
+        $temperature = $light = $gender = $age = $occupation = $permission = "";
         
     ?>
     <div class="header">
