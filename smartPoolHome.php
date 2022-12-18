@@ -32,14 +32,14 @@
     <div class="main">
         <?php
 
-            $temperature = $_POST["temperature"];
-            $lightAmount = $_POST["lightAmount"];
-            $height = $_POST["height"];
+            $temperature = $_GET["temperature"];
+            $lightAmount = $_GET["lightAmount"];
+            $height = $_GET["height"];
 
             $txt = fopen('sensorData.txt','w') or die("Unable to open file!");
 
-            fwrite($txt, "Temperature: ".$_POST['temperature'].PHP_EOL);
-            fwrite($txt, "Part of day: ".$_POST['lights'].PHP_EOL);
+            fwrite($txt, "Temperature: ".$_GET['temperature'].PHP_EOL);
+            fwrite($txt, "Part of day: ".$_GET['lights'].PHP_EOL);
             fwrite($txt, "Height of water: "."off".PHP_EOL);
 
             fclose($txt);
