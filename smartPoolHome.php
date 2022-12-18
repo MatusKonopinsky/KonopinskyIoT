@@ -51,8 +51,18 @@
 
             }
 
+            $lines_array = file("sensorData.txt");
+            $search_string = "Temperature";
+
+            foreach ($lines_array as $line) {
+                f(strpos($line, $search_string) !== false){
+                    list(, $new_str) = explode(":", $line);
+                    $new_str = trim($new_str);
+                }
+            }
+
             echo "<h2>Sensor data:</h2>";
-            echo "Temperature: ".$_GET['temperature'];
+            echo "Temperature: ".$new_str;
             echo "<br>";
             echo "Part of day: ".$_GET['lightAmount'];
             echo "<br>";
