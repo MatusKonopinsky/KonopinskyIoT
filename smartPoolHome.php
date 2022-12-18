@@ -49,18 +49,15 @@
 
                 fclose($txt);
 
-
-
-                echo "<h2>Sensor data:</h2>";
-                echo "Temperature: ".$_GET['temperature'];
-                echo "<br>";
-                echo "Part of day: ".$_GET['lightAmount'];
-                echo "<br>";
-                echo "Height of water: ".$_GET['height'];
-                echo "<br>";
             }
 
-
+            echo "<h2>Sensor data:</h2>";
+            echo "Temperature: ".$_GET['temperature'];
+            echo "<br>";
+            echo "Part of day: ".$_GET['lightAmount'];
+            echo "<br>";
+            echo "Height of water: ".$_GET['height'];
+            echo "<br>";
 
 
             
