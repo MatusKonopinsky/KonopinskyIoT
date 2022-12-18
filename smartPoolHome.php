@@ -47,11 +47,11 @@
 
 
             echo "<h2>Entered data:</h2>";
-            echo "Temp: ".$temperature;
+            echo "Temperature: ".$temperature;
             echo "<br>";
-            echo "Lights: ".$lightAmount;
+            echo "Part of day: ".$lightAmount;
             echo "<br>";
-            echo "Height: ".$height;
+            echo "Height of water: ".$height;
             echo "<br>";
         ?>
     </div>  

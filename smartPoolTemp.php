@@ -13,7 +13,7 @@
 <body>
     <?php
         // define variables and set to empty values
-        $temperature = $lightAmount = $height = "";
+        $temperatureFromUser = "";
         
     ?>
 
@@ -30,29 +30,30 @@
     </div>
 
     <div class="main">
+
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+
+                Set temperature: <input type="range" name="temperature" min="26" max="32" value="<?php echo $temperatureFromUser;?>">
+                <br><br>
+
+                <input type="submit" name="submit" value="Submit">  
+
+        </form>
         <?php
 
-            $temperature = $_POST["temperature"];
-            $lightAmount = $_POST["lightAmount"];
-            $height = $_POST["height"];
+            $temperatureFromUser = $_POST["temperature"];
 
-            $txt = fopen('sensorData.txt','w') or die("Unable to open file!");
+            if(isset($_POST['submit'])){
+                $txt = fopen('inputData.txt','w') or die("Unable to open file!");
 
-            fwrite($txt, "Temperature: ".$_POST['temperature'].PHP_EOL);
-            fwrite($txt, "Part of day: ".$_POST['lights'].PHP_EOL);
-            fwrite($txt, "Height of water: "."off".PHP_EOL);
+                fwrite($txt, "Temperature: ".$_POST['temperature'].PHP_EOL);
 
-            fclose($txt);
+                fclose($txt);
 
-
-
-            echo "<h2>Entered data:</h2>";
-            echo "Temp: ".$temperature;
-            echo "<br>";
-            echo "Lights: ".$lightAmount;
-            echo "<br>";
-            echo "Height: ".$height;
-            echo "<br>";
+                echo "<h2>Entered data:</h2>";
+                echo "Temp: ".$temperature;
+                echo "<br>";
+            }
         ?>
     </div>  
 

@@ -13,7 +13,7 @@
 <body>
     <?php
         // define variables and set to empty values
-        $temperature = $lightAmount = $height = "";
+        $water = "off";
         
     ?>
 
@@ -30,28 +30,44 @@
     </div>
 
     <div class="main">
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+
+            Turn on the water: <label class="toggle">
+                                    <input type="checkbox" name="water" value="on">
+                                    <span class="slider"></span>
+                                </label>
+            <br><br>
+
+
+
+            <input type="submit" name="submit" value="Submit">  
+
+        </form>
         <?php
 
-            $temperature = $_POST["temperature"];
-            $lightAmount = $_POST["lightAmount"];
-            $height = $_POST["height"];
+            $water = $_POST["water"];
 
-            $txt = fopen('sensorData.txt','w') or die("Unable to open file!");
+            if(isset($_POST['water'])){
+                $water = $_POST["water"];
+            }
 
-            fwrite($txt, "Temperature: ".$_POST['temperature'].PHP_EOL);
-            fwrite($txt, "Part of day: ".$_POST['lights'].PHP_EOL);
-            fwrite($txt, "Height of water: "."off".PHP_EOL);
+            if(isset($_POST['submit'])){
+                $txt = fopen('sensorData.txt','w') or die("Unable to open file!");
 
-            fclose($txt);
+                if(isset($_POST['water'])){
+                    fwrite($txt, "Water: ".$_POST['water'].PHP_EOL);
+                }
+                else{
+                    fwrite($txt, "Water: "."off".PHP_EOL);
+                }
 
+
+                fclose($txt);
+            }
 
 
             echo "<h2>Entered data:</h2>";
-            echo "Temp: ".$temperature;
-            echo "<br>";
-            echo "Lights: ".$lightAmount;
-            echo "<br>";
-            echo "Height: ".$height;
+            echo "Water: ".$water;
             echo "<br>";
         ?>
     </div>  
