@@ -30,7 +30,7 @@ body {
 .main{
   position: absolute;
   top: 50%;
-  left: 30%;
+  left: 40%;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0, 0.4);
 }
