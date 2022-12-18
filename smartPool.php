@@ -47,6 +47,30 @@
         </form>
     </div>  
 
+    <?php
+
+$temperature = $_POST["temperature"];
+$lights = $_POST["lights"];
+$water = $_POST["water"];
+
+if(isset($_POST['submit'])){
+  $txt = fopen('inputData.txt','w') or die("Unable to open file!");
+  fwrite($txt, "Temperature: ".$_POST['temperature'].PHP_EOL);
+  fwrite($txt, "Lights: ".$_POST['lights'].PHP_EOL);
+  fwrite($txt, "Water: ".$_POST['water'].PHP_EOL);
+  fclose($txt);
+}
+
+
+echo "<h2>Entered data:</h2>";
+echo "Temp: ".$temperature;
+echo "<br>";
+echo "Lights: ".$lights;
+echo "<br>";
+echo "Water: ".$water;
+echo "<br>";
+?>
+
     
 </body>
 </html>
