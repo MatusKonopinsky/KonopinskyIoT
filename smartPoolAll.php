@@ -33,7 +33,7 @@
     <div class="main">
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
-            Set temperature: <input type="range" name="temperature" min="26" max="32" value="<?php echo $$temperatureFromUser;?>">
+            Set temperature: <div class="slidecontainer"><input type="range" name="temperature" min="26" max="32" value="<?php echo $$temperatureFromUser;?>"></div>
             <br><br>
 
             Lights: <label class="toggle">
