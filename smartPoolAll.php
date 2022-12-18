@@ -13,7 +13,7 @@
 <body>
     <?php
         // define variables and set to empty values
-        $temperature = $lightAmount = $height = $valveDeg =  "";
+        $temperatureFromSensor = $temperatureFromUser = $lightAmount = $height =  "";
         $lights = $water = "off";
         
     ?>
@@ -33,7 +33,7 @@
     <div class="main">
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
-            Set temperature: <input type="range" name="temperature" min="26" max="32" value="<?php echo $temperature;?>">
+            Set temperature: <input type="range" name="temperature" min="26" max="32" value="<?php echo $$temperatureFromUser;?>">
             <br><br>
 
             Lights: <label class="toggle">
@@ -54,48 +54,50 @@
             <input type="submit" name="submit" value="Submit">  
 
         </form>
+
+        <?php
+
+            $temperatureFromUser = $_POST["temperature"];
+
+            if(isset($_POST['lights'])){
+              $lights = $_POST["lights"];
+            }
+            if(isset($_POST['water'])){
+              $water = $_POST["water"];
+            }
+
+            if(isset($_POST['submit'])){
+              $txt = fopen('inputData.txt','w') or die("Unable to open file!");
+              fwrite($txt, "Temperature: ".$_POST['temperature'].PHP_EOL);
+
+              if(isset($_POST['lights'])){
+                fwrite($txt, "Lights: ".$_POST['lights'].PHP_EOL);
+              }
+              else{
+                fwrite($txt, "Lights: "."off".PHP_EOL);
+              }
+              if(isset($_POST['water'])){
+                fwrite($txt, "Water: ".$_POST['water'].PHP_EOL);
+              }
+              else{
+                fwrite($txt, "Water: "."off".PHP_EOL);
+              }
+
+              fclose($txt);
+            }
+
+
+            echo "<h2>Entered data:</h2>";
+            echo "Temp: ".$temperatureFromUser;
+            echo "<br>";
+            echo "Lights: ".$lights;
+            echo "<br>";
+            echo "Water: ".$water;
+            echo "<br>";
+        ?>
     </div>  
 
-    <?php
-
-$temperature = $_POST["temperature"];
-
-if(isset($_POST['lights'])){
-  $lights = $_POST["lights"];
-}
-if(isset($_POST['water'])){
-  $water = $_POST["water"];
-}
-
-if(isset($_POST['submit'])){
-  $txt = fopen('inputData.txt','w') or die("Unable to open file!");
-  fwrite($txt, "Temperature: ".$_POST['temperature'].PHP_EOL);
-
-  if(isset($_POST['lights'])){
-    fwrite($txt, "Lights: ".$_POST['lights'].PHP_EOL);
-  }
-  else{
-    fwrite($txt, "Lights: "."off".PHP_EOL);
-  }
-  if(isset($_POST['water'])){
-    fwrite($txt, "Water: ".$_POST['water'].PHP_EOL);
-  }
-  else{
-    fwrite($txt, "Water: "."off".PHP_EOL);
-  }
-
-  fclose($txt);
-}
-
-
-echo "<h2>Entered data:</h2>";
-echo "Temp: ".$temperature;
-echo "<br>";
-echo "Lights: ".$lights;
-echo "<br>";
-echo "Water: ".$water;
-echo "<br>";
-?>
+    
 
     
 </body>

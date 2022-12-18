@@ -13,7 +13,7 @@
 <body>
     <?php
         // define variables and set to empty values
-        $temperature = $lightAmount = $height;
+        $temperature = $lightAmount = $height = "";
         
     ?>
 
@@ -30,33 +30,31 @@
     </div>
 
     <div class="main">
-        
+        <?php
+
+            $temperature = $_POST["temperature"];
+            $lightAmount = $_POST["lightAmount"];
+            $height = $_POST["height"];
+
+            $txt = fopen('sensorData.txt','w') or die("Unable to open file!");
+
+            fwrite($txt, "Temperature: ".$_POST['temperature'].PHP_EOL);
+            fwrite($txt, "Part of day: ".$_POST['lights'].PHP_EOL);
+            fwrite($txt, "Height of water: "."off".PHP_EOL);
+
+            fclose($txt);
+
+
+
+            echo "<h2>Entered data:</h2>";
+            echo "Temp: ".$temperature;
+            echo "<br>";
+            echo "Lights: ".$lightAmount;
+            echo "<br>";
+            echo "Height: ".$height;
+            echo "<br>";
+        ?>
     </div>  
-
-    <?php
-
-        $temperature = $_POST["temperature"];
-        $lightAmount = $_POST["lightAmount"];
-        $height = $_POST["height"];
-
-        $txt = fopen('sensorData.txt','w') or die("Unable to open file!");
-
-        fwrite($txt, "Temperature: ".$_POST['temperature'].PHP_EOL);
-        fwrite($txt, "Part of day: ".$_POST['lights'].PHP_EOL);
-        fwrite($txt, "Height of water: "."off".PHP_EOL);
-
-        fclose($txt);
-    
-
-
-        echo "<h2>Entered data:</h2>";
-        echo "Temp: ".$temperature;
-        echo "<br>";
-        echo "Lights: ".$lightAmount;
-        echo "<br>";
-        echo "Height: ".$height;
-        echo "<br>";
-    ?>
 
     
 </body>
