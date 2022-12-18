@@ -7,7 +7,7 @@ body, html {
     box-sizing: border-box;
   }
   .bg-image{
-      background-image: url("road.jpg");
+      background-image: url("water.jpg");
       height: 100%; 
     
       background-position: center;
