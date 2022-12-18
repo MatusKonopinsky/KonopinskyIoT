@@ -13,7 +13,8 @@
 <body>
     <?php
         // define variables and set to empty values
-        $temperature = $lightAmount = $height = $valveDeg = $lights = $water = "";
+        $temperature = $lightAmount = $height = $valveDeg =  "";
+        $lights = $water = "off";
         
     ?>
 
@@ -50,8 +51,12 @@
     <?php
 
 $temperature = $_POST["temperature"];
-$lights = $_POST["lights"];
-$water = $_POST["water"];
+if(isset($_POST['lights'])){
+  $lights = $_POST["lights"];
+}
+if(isset($_POST['water'])){
+  $water = $_POST["water"];
+}
 
 if(isset($_POST['submit'])){
   $txt = fopen('inputData.txt','w') or die("Unable to open file!");
