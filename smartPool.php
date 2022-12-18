@@ -13,12 +13,39 @@
 <body>
     <?php
         // define variables and set to empty values
-        $temperature = $lightAmount = $height = $valveDeg = "";
+        $temperature = $lightAmount = $height = $valveDeg = $lights = $water = "";
         
     ?>
+
     <div class="header">
         <h1>Header</h1>
     </div>
+
+    <div class="body">
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+
+            Set temperature: <input type="text" name="temperature" value="<?php echo $temperature;?>">
+            <br><br>
+
+            Lights: <label class="toggle">
+                        <input type="checkbox" name="lights" value="<?php echo $lights;?>">
+                        <span class="slider"></span>
+                    </label>
+
+            <br><br>
+
+            Turn on the water: <label class="toggle">
+                                    <input type="checkbox" name="water" value="<?php echo $water;?>">
+                                    <span class="slider"></span>
+                                </label>
+            <br><br>
+
+            
+
+            <input type="submit" name="submit" value="Submit">  
+
+        </form>
+    </div>  
 
     
 </body>
