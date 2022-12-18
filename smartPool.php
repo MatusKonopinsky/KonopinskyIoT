@@ -24,5 +24,7 @@ $name = $email = $gender = $age = $occupation = $permission = "";
 
 <h1>Smart pool control center</h1>
 
+</div>
+
 </body>
 </html>
