@@ -33,7 +33,8 @@
     <div class="main">
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
-            Set temperature: <div class="slidecontainer"><input type="range" name="temperature" min="26" max="32" value="<?php echo $$temperatureFromUser;?>" class="slider"></div>
+            Set temperature: <input type="range" name="temperature" min="26" max="32" value="<?php echo $$temperatureFromUser;?>">
+            <p>Value: <span id="demo"></span></p>
             <script>
                 var slider = document.getElementById("myRange");
                 var output = document.getElementById("demo");
