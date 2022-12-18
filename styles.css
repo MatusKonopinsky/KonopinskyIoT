@@ -28,7 +28,7 @@ body {
 }
 
 .main{
-  padding: 20px 1000px 20px 80px;
+  padding: 20px 1000px 20px 0px;
   text-align: left;
   position: absolute;
   top: 50%;
