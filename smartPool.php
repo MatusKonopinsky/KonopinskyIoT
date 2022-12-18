@@ -10,18 +10,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>  
+<body>
+    <?php
+        // define variables and set to empty values
+        $name = $email = $gender = $age = $occupation = $permission = "";
+        
+    ?>
+    <div class="header">
+        <h1>Header</h1>
+    </div>
 
-<?php
-// define variables and set to empty values
-$name = $email = $gender = $age = $occupation = $permission = "";
-
-?>
-
-<div class="header">  
-    <h1>Smart pool control center</h1>
-</div>
-
-
+    
 </body>
 </html>
