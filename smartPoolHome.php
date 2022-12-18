@@ -7,6 +7,7 @@
     <meta name="keywords" content="html, discord, bot, events">
     <meta name="author" content="Matúš Konopinský">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="2">
     <link rel="stylesheet" href="styles.css">
 </head>
 
