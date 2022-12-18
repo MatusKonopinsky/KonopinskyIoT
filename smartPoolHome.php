@@ -46,7 +46,7 @@
 
 
 
-            echo "<h2>Entered data:</h2>";
+            echo "<h2>Sensor data:</h2>";
             echo "Temperature: ".$temperature;
             echo "<br>";
             echo "Part of day: ".$lightAmount;
