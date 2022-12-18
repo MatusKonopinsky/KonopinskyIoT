@@ -23,7 +23,5 @@ $name = $email = $gender = $age = $occupation = $permission = "";
 </div>
 
 
-</div>
-
 </body>
 </html>
