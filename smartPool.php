@@ -21,7 +21,7 @@
         <h1>Header</h1>
     </div>
 
-    <div class="body">
+    <div class="main">
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
             Set temperature: <input type="text" name="temperature" value="<?php echo $temperature;?>">
