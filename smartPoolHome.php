@@ -48,11 +48,11 @@
 
 
             echo "<h2>Sensor data:</h2>";
-            echo "Temperature: ".$temperature;
+            echo "Temperature: ".$_GET["temperature"];
             echo "<br>";
-            echo "Part of day: ".$lightAmount;
+            echo "Part of day: ".$_GET["lightAmount"];
             echo "<br>";
-            echo "Height of water: ".$height;
+            echo "Height of water: ".$_GET["height"];
             echo "<br>";
         ?>
     </div>  
