@@ -19,7 +19,7 @@
     ?>
 
     <div class="header">
-        <h1>Header</h1>
+        <h1>Smart pool - control center</h1>
     </div>
 
     <div class="main">
