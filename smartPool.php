@@ -28,14 +28,14 @@
             <br><br>
 
             Lights: <label class="toggle">
-                        <input type="checkbox" name="lights" value="<?php echo $lights;?>">
+                        <input type="checkbox" name="lights" value="on">
                         <span class="slider"></span>
                     </label>
 
             <br><br>
 
             Turn on the water: <label class="toggle">
-                                    <input type="checkbox" name="water" value="<?php echo $water;?>">
+                                    <input type="checkbox" name="water" value="on">
                                     <span class="slider"></span>
                                 </label>
             <br><br>
