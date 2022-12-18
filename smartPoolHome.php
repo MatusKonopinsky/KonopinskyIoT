@@ -40,8 +40,8 @@
             $txt = fopen('sensorData.txt','w') or die("Unable to open file!");
 
             fwrite($txt, "Temperature: ".$_GET['temperature'].PHP_EOL);
-            fwrite($txt, "Part of day: ".$_GET['lights'].PHP_EOL);
-            fwrite($txt, "Height of water: "."off".PHP_EOL);
+            fwrite($txt, "Part of day: ".$_GET['lightAmount'].PHP_EOL);
+            fwrite($txt, "Height of water: ".$_GET["height"].PHP_EOL);
 
             fclose($txt);
 
