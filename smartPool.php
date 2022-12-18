@@ -18,11 +18,11 @@ $name = $email = $gender = $age = $occupation = $permission = "";
 
 ?>
 
-<div class="bg-image">
-
 <div class="header">  
     <h1>Smart pool control center</h1>
 </div>
+
+<div class="bg-image">
 
 </div>
 
