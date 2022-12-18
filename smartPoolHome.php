@@ -37,13 +37,29 @@
             $lightAmount = $_GET["lightAmount"];
             $height = $_GET["height"];
 
-            $txt = fopen('sensorData.txt','w') or die("Unable to open file!");
+            
 
-            fwrite($txt, "Temperature: ".$_GET['temperature'].PHP_EOL);
-            fwrite($txt, "Part of day: ".$_GET['lightAmount'].PHP_EOL);
-            fwrite($txt, "Height of water: ".$_GET["height"].PHP_EOL);
+            if(isset($_GET['temperature'])){
 
-            fclose($txt);
+                $txt = fopen('sensorData.txt','w') or die("Unable to open file!");
+                
+                fwrite($txt, "Temperature: ".$_GET['temperature'].PHP_EOL);
+                fwrite($txt, "Part of day: ".$_GET['lightAmount'].PHP_EOL);
+                fwrite($txt, "Height of water: ".$_GET["height"].PHP_EOL);
+
+                fclose($txt);
+
+
+
+                echo "<h2>Sensor data:</h2>";
+                echo "Temperature: ".$_GET["temperature"];
+                echo "<br>";
+                echo "Part of day: ".$_GET["lightAmount"];
+                echo "<br>";
+                echo "Height of water: ".$_GET["height"];
+                echo "<br>";
+            }
+
 
 
 
