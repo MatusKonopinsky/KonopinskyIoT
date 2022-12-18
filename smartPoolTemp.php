@@ -50,10 +50,11 @@
 
                 fclose($txt);
 
-                echo "<h2>Entered data:</h2>";
+                
+            }
+            echo "<h2>Entered data:</h2>";
                 echo "Temp: ".$temperature;
                 echo "<br>";
-            }
         ?>
     </div>  
 

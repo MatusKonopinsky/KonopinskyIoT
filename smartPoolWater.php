@@ -52,7 +52,7 @@
             }
 
             if(isset($_POST['submit'])){
-                $txt = fopen('sensorData.txt','w') or die("Unable to open file!");
+                $txt = fopen('inputData.txt','w') or die("Unable to open file!");
 
                 if(isset($_POST['water'])){
                     fwrite($txt, "Water: ".$_POST['water'].PHP_EOL);
