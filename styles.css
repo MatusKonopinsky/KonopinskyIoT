@@ -29,7 +29,7 @@ body {
 
 .main{
   /* top | right | bottom | left */
-  padding: 20px 0px 20px 100px;
+  padding: 20px 0px 20px 500px;
 
   text-align: left;
   position: absolute;
