@@ -1,25 +1,19 @@
-body, html {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-  }
-  * {
-    box-sizing: border-box;
-  }
-  .bg-image{
-      background-image: url("water.jpg");
-      height: 100%; 
-    
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      filter: blur(2px);
-  }
-  .header {
-    padding: 20px;
-    text-align: center;
-    color: black;
-    
-  }
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-image: url("water.jpg");
+}
+
+/* Style the header */
+.header {
+  padding: 20px;
+  text-align: center;
+  color: white;
+  
+}
+
   
   .reset {
     position: absolute;
