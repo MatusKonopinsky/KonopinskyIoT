@@ -22,6 +22,14 @@
         <h1>Smart pool - control center</h1>
     </div>
 
+    <div class="topnav">
+        <a href="https://konopinskyiot.azurewebsites.net/smartPoolHome.php">Home</a>
+        <a href="https://konopinskyiot.azurewebsites.net/smartPoolAll.php">Set Program</a>
+        <a href="https://konopinskyiot.azurewebsites.net/smartPoolLights.php">Lights</a>
+        <a href="https://konopinskyiot.azurewebsites.net/smartPoolTemp.php">Temperature</a>
+        <a href="https://konopinskyiot.azurewebsites.net/smartPoolWater.php">Water</a>
+    </div>
+
     <div class="main">
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
