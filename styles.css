@@ -42,6 +42,20 @@ body {
   width: 80%;
 }
 
+.bottom{
+  padding: 20px 0px 20px 500px;
+
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.4);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+}
+
 .topnav {
   overflow: hidden;
   position: absolute;

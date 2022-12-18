@@ -86,7 +86,11 @@
               fclose($txt);
             }
 
-
+        ?>
+    </div>  
+    
+    <div class="bottom">
+        <?php
             echo "<h2>Entered data:</h2>";
             echo "Temp: ".$temperatureFromUser;
             echo "<br>";
@@ -95,7 +99,7 @@
             echo "Water: ".$water;
             echo "<br>";
         ?>
-    </div>  
+    </div>
 
     
 
