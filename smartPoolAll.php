@@ -80,17 +80,17 @@
               fwrite($txt, "Temperature: ".$_POST['temperature'].PHP_EOL);
 
               if(isset($_POST['lights'])){
-                fwrite($txt, "Lights: ".$_POST['lights'].PHP_EOL);
+                fwrite($txt, "Lights: "."1".PHP_EOL);
               }
               else{
-                fwrite($txt, "Lights: "."off".PHP_EOL);
+                fwrite($txt, "Lights: "."0".PHP_EOL);
                 $lights = "off";
               }
               if(isset($_POST['water'])){
-                fwrite($txt, "Water: ".$_POST['water'].PHP_EOL);
+                fwrite($txt, "Water: "."1".PHP_EOL);
               }
               else{
-                fwrite($txt, "Water: "."off".PHP_EOL);
+                fwrite($txt, "Water: "."0".PHP_EOL);
                 $water = "off";
               }
 
