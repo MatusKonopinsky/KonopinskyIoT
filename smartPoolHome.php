@@ -39,7 +39,7 @@
 
             
 
-            if(isset($_GET['temperature'])){
+            if(isset($_GET['temperature']) && isset($_GET['lightAmount']) && isset($_GET['height'])){
 
                 $txt = fopen('sensorData.txt','w') or die("Unable to open file!");
 
