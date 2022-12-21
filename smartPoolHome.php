@@ -45,28 +45,38 @@
 
                 fwrite($txt, "Temperature: ".$_GET['temperature'].PHP_EOL);
                 fwrite($txt, "Part of day: ".$_GET['lightAmount'].PHP_EOL);
-                fwrite($txt, "Height of water: ".$_GET['height'].PHP_EOL);
+                fwrite($txt, "Level of water: ".$_GET['height'].PHP_EOL);
 
                 fclose($txt);
 
             }
 
             $lines_array = file("sensorData.txt");
-            $search_string = "Temperature";
+            $search_temp = "Temperature";
+            $search_day = "Part of day";
+            $search_water = "Level of water";
 
             foreach ($lines_array as $line) {
-                if(strpos($line, $search_string) !== false){
-                    list(, $new_str) = explode(":", $line);
-                    $new_str = trim($new_str);
+                if(strpos($line, $search_temp) !== false){
+                    list(, $new_str1) = explode(":", $line);
+                    $new_str1 = trim($new_str1);
+                }
+                else if(strpos($line, $search_day) !== false){
+                    list(, $new_str2) = explode(":", $line);
+                    $new_str2 = trim($new_str2);
+                }
+                else if(strpos($line, $search_water) !== false){
+                    list(, $new_str3) = explode(":", $line);
+                    $new_str3 = trim($new_str3);
                 }
             }
 
             echo "<h2>Sensor data:</h2>";
-            echo "Temperature: ".$new_str;
+            echo "Temperature: ".$new_str1;
             echo "<br>";
-            echo "Part of day: ".$_GET['lightAmount'];
+            echo "Part of day: ".$new_str2;
             echo "<br>";
-            echo "Height of water: ".$_GET['height'];
+            echo "Level of water: ".$new_str3;
             echo "<br>";
 
 

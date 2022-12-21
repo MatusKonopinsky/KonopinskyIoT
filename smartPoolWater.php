@@ -13,7 +13,7 @@
 <body>
     <?php
         // define variables and set to empty values
-        $water = "off";
+        $water = "";
         
     ?>
 

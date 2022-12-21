@@ -13,8 +13,7 @@
 <body>
     <?php
         // define variables and set to empty values
-        $temperatureFromSensor = $temperatureFromUser = $lightAmount = $height =  "";
-        $lights = $water = "off";
+        $temperatureFromUser = $lights = $water = "";
         
     ?>
 
@@ -102,7 +101,7 @@
     <div class="bottom">
         <?php
             echo "<h2>Entered data:</h2>";
-            echo "Temp: ".$temperatureFromUser;
+            echo "Temperature: ".$temperatureFromUser;
             echo "<br>";
             echo "Lights: ".$lights;
             echo "<br>";
