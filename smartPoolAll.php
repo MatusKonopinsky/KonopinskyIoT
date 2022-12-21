@@ -84,12 +84,14 @@
               }
               else{
                 fwrite($txt, "Lights: "."off".PHP_EOL);
+                $lights = "off";
               }
               if(isset($_POST['water'])){
                 fwrite($txt, "Water: ".$_POST['water'].PHP_EOL);
               }
               else{
                 fwrite($txt, "Water: "."off".PHP_EOL);
+                $water = "off";
               }
 
               fclose($txt);
